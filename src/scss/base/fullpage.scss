@@ -1,13 +1,13 @@
 body {
 	.fp-init & {
-		// Щоб вимкнути оновлення сторінки свайпом на телефоні
+		// Чтобы отключить обновление страницы свайпом на телефоне
 		overflow: hidden;
 		touch-action: none;
 		overscroll-behavior: none;
 	}
 }
 
-// Оболонка секцій
+// Оболочка секций
 [data-fp] {
 	min-height: 100vh;
 	.touch & {
@@ -17,16 +17,16 @@ body {
 		}
 	}
 	.fp-init & {
-		// Для того щоб секції не перекривали буллети
+		// Для того чтобы секции не перекрывали буллеты
 		z-index: 1;
-		// Відносно чого позиціонуються секції
+		// В отношении чего позиционируются секции
 		touch-action: none;
 		position: relative;
 		overflow: hidden;
 	}
 }
 
-// Секція
+// Секция
 [data-fp-section] {
 	.fp-switching & {
 		touch-action: none;
@@ -42,7 +42,7 @@ body {
 		overflow: auto;
 	}
 
-	// Модифікації
+	// Модификации
 	.fp-init .slider-mode &,
 	.fp-init .cards-mode & {
 		transition: transform 0.7s cubic-bezier(0.55, 0.085, 0, 0.99) 0s;
@@ -52,7 +52,7 @@ body {
 	}
 }
 
-// Оболонка буллетів
+// Оболочка буллетов
 .fp-bullets {
 	position: fixed;
 	top: 50%;
