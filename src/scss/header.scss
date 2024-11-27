@@ -1,4 +1,148 @@
 //====================================================================================================
+.header {
+  position: fixed;
+  width: 100%;
+  min-height: 40px;
+  top: 0;
+  left: 0;
+  padding: 25px 0px;
+  z-index: 100;
+  // .header__container
+
+  &__container {
+  }
+
+  // .header__content
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .header__logo
+
+  &__logo {
+    & > a {
+      display: none;
+      &._active {
+        display: block;
+      }
+    }
+  }
+
+  // .header__btn
+
+  &__btn {
+  }
+}
+.right-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  // .right-header__btn
+
+  &__btn {
+    display: none;
+    &._login {
+      display: inline-flex;
+    }
+    &._user {
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+  }
+}
+.dropdown-right-header {
+  display: none;
+  position: absolute;
+  bottom: -33px;
+  right: -55px;
+  background-color: #fff;
+  padding: 42px;
+  min-width: 470px;
+  transform: translate(0px, 100%);
+  @media (max-width: 500px) {
+    min-width: 400px;
+  }
+  @media (max-width: 400px) {
+    min-width: 310px;
+  }
+  &._active {
+    display: block;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    top: 0;
+    right: 55px;
+    background-color: #fff;
+    transform: translate(-25%, -50%) rotate(45deg);
+  }
+  // .dropdown-right-header__title
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+    color: $siteBgDark;
+    transition: color 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $interfaceAccentRed;
+      }
+    }
+  }
+
+  // .dropdown-right-header__history
+
+  &__history {
+    margin-top: 24px;
+  }
+
+  // .dropdown-right-header__attempts
+
+  &__attempts {
+    margin-top: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    color: $siteBgDark;
+  }
+}
+.history-header-dropdown {
+  // .history-header-dropdown__title
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+    color: $siteBgDark;
+    transition: color 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $interfaceAccentRed;
+      }
+    }
+  }
+
+  // .history-header-dropdown__desc
+
+  &__desc {
+    margin-top: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: #828282;
+    a {
+      font-weight: 500;
+    }
+  }
+}
 
 //====================================================================================================
 

@@ -1,10 +1,152 @@
-<div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
-			<div class="popup__text">
-				Text
-			</div>
-		</div>
-	</div>
+<div id="check-popup" aria-hidden="true" class="popup check-popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__close" data-close></div>
+      <h2 class="check-popup__title popup-title">
+        Загрузите чек и получите <span>+1 попытку</span> крутить колесо
+      </h2>
+      <div class="check-popup__file file-check-popup" id="dropzone">
+        <div class="file-check-popup__btn">
+          <input type="file" id="check-popup-input" />
+          <label
+            id="check-popup-load"
+            for="check-popup-input"
+            class="button _active"
+          >
+            Загрузить файл или перетащите его прямо сюда</label
+          >
+        </div>
+
+        <span class="file-check-popup__desc">до 3 Мб, JPG, PNG</span>
+      </div>
+      <div class="check-popup__history history-check-popup">
+        <h3 class="history-check-popup__title">История транзакций</h3>
+        <ul class="history-check-popup__list list-history-check">
+          <li class="list-history-check__item item-list-history-check">
+            <div class="item-list-history-check__left">26.03.2020</div>
+            <div
+              class="item-list-history-check__right right-item-history-check"
+            >
+              <div class="right-item-history-check__top top-item-history-check">
+                <p class="top-item-history-check__task">Чек №394395959</p>
+                <p class="top-item-history-check__status _deny">Отказано</p>
+              </div>
+              <p class="right-item-history-check__error">
+                Размытое фото. Пожалуйста, загрузите заново
+              </p>
+            </div>
+          </li>
+          <li class="list-history-check__item item-list-history-check">
+            <div class="item-list-history-check__left">26.03.2020</div>
+            <div
+              class="item-list-history-check__right right-item-history-check"
+            >
+              <div class="right-item-history-check__top top-item-history-check">
+                <p class="top-item-history-check__task">
+                  Задание: Сделайте репост о конкурсе ВК
+                </p>
+                <p class="top-item-history-check__status _success">
+                  + 1 попытка
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="promocodes-popup" aria-hidden="true" class="popup promocodes-popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__close" data-close></div>
+      <h2 class="promocodes-popup__title popup-title">
+        Мои <span>промокоды</span>
+      </h2>
+      <ul class="promocodes-popup__list list-promocodes-popup">
+        <li class="list-promocodes-popup__item item-promocodes-popup">
+          <div class="item-promocodes-popup__left">28.03.2020</div>
+          <div class="item-promocodes-popup__right right-item-promocodes">
+            <span class="right-item-promocodes__status">Вы выиграли!</span>
+            <p class="right-item-promocodes__desc">
+              Нежный с курицей при заказе от 799 р. в подарок.
+            </p>
+            <div class="right-item-promocodes__bottom bottom-item-promocodes">
+              <div class="bottom-item-promocodes__code">NK052AZ</div>
+              <p class="bottom-item-promocodes__copy-text">
+                Скопировать промокод
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="list-promocodes-popup__item item-promocodes-popup">
+          <div class="item-promocodes-popup__left">28.03.2020</div>
+          <div class="item-promocodes-popup__right right-item-promocodes">
+            <span class="right-item-promocodes__status">Вы выиграли!</span>
+            <p class="right-item-promocodes__desc">
+              Нежный с курицей при заказе от 799 р. в подарок.
+            </p>
+            <div class="right-item-promocodes__bottom bottom-item-promocodes">
+              <div class="bottom-item-promocodes__code">NK052AZ</div>
+              <p class="bottom-item-promocodes__copy-text">
+                Скопировать промокод
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div id="super-popup" aria-hidden="true" class="popup super-popup">
+  <div class="popup__wrapper">
+    <div class="popup__content _small">
+      <div class="popup__close" data-close></div>
+      <div class="super-popup__img">
+        <img src="@img/popup/super.png" alt="super" />
+      </div>
+      <h2 class="super-popup__title">Супер!</h2>
+      <p class="super-popup__subtitle">
+        Вы получаете +1 попытку крутить колесо
+      </p>
+    </div>
+  </div>
+</div>
+
+<div id="sad-popup" aria-hidden="true" class="popup sad-popup">
+  <div class="popup__wrapper">
+    <div class="popup__content _small">
+      <div class="popup__close" data-close></div>
+      <div class="sad-popup__img">
+        <img src="@img/popup/sad.png" alt="sad" />
+      </div>
+      <h2 class="sad-popup__title">Упс! Задание не выполнено.</h2>
+      <p class="sad-popup__subtitle">Попробуйте еще раз</p>
+    </div>
+  </div>
+</div>
+
+<div id="grac-popup" aria-hidden="true" class="popup grac-popup">
+  <div class="popup__wrapper">
+    <div class="popup__content _small">
+      <div class="popup__close" data-close></div>
+      <div class="grac-popup__img">
+        <img src="@img/popup/super.png" alt="grac" />
+      </div>
+      <h2 class="grac-popup__title">Поздравляем!</h2>
+      <p class="grac-popup__subtitle">
+        Вы выиграли
+        <span>Нежный ролл с курицей при заказе от 799 р. в подарок. </span>
+      </p>
+      <div class="grac-popup__code">NK052AZ</div>
+      <p class="grac-popup__copy-text">Скопировать промокод</p>
+      <div class="grac-popup__all-codes all-codes-grac-popup">
+        <a href="#" data-popup="#check-popup" class="all-codes-grac-popup__text"
+          >Все мои промокоды</a
+        >
+      </div>
+    </div>
+  </div>
 </div>

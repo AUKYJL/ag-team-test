@@ -1,1 +1,13 @@
 // Заголовки, общие БЭМ блоки и т.д.
+.popup-title {
+  font-family: "Pusia";
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  color: $siteBgDark;
+  span {
+    color: $interfaceAccentRed;
+  }
+}

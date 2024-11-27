@@ -1,5 +1,53 @@
 <header class="header">
   <div class="header__container">
-    <div class="header__content"></div>
+    <div class="header__content">
+      <div class="header__logo logo-header">
+        <a href="#" class="logo-header__white _active" title="На главную">
+          <img src="img/logo-white.svg" alt="logo" />
+        </a>
+        <a href="#" class="logo-header__red" title="На главную"
+          ><img src="@img/logo-red.svg" alt="" />
+        </a>
+      </div>
+      <div class="header__right right-header">
+        <button
+          id="login-btn"
+          type="submit"
+          class="right-header__btn button _secondary _login"
+        >
+          Войти
+        </button>
+        <button type="submit" class="right-header__btn button _secondary _user">
+          <img src="@img/icons/user.svg" alt="user" />
+        </button>
+        <div class="right-header__dropdown dropdown-right-header">
+          <a
+            href="#"
+            data-popup="#promocodes-popup"
+            class="dropdown-right-header__title"
+          >
+            Мои промокоды
+          </a>
+          <div class="dropdown-right-header__history history-header-dropdown">
+            <a
+              href="#"
+              data-popup="#check-popup"
+              class="history-header-dropdown__title"
+              >История транзакций</a
+            >
+            <p class="history-header-dropdown__desc">
+              Здесь вы можете увидеть
+              <a href="#" title="Что это такое?">все начисленные попытки </a>
+            </p>
+          </div>
+          <p class="dropdown-right-header__attempts">
+            Попыток крутить колесо: 2
+          </p>
+          <p data-popup="#sad-popup" style="color: black">sad popup</p>
+          <p data-popup="#super-popup" style="color: black">super popup</p>
+          <p data-popup="#grac-popup" style="color: black">grac popup</p>
+        </div>
+      </div>
+    </div>
   </div>
 </header>

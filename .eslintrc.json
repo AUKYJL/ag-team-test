@@ -1,0 +1,25 @@
+{
+  "env": {
+    "browser": true,
+    "es2022": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "prettier"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "settings": {
+    "react": {
+      "version": "999.999.999"
+    }
+  },
+  "rules": {
+    "prettier/prettier": ["error", { "endOfLine": "lf" }]
+  }
+}

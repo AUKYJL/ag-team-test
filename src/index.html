@@ -1,150 +1,215 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Верстка «NEW_PROJECT_NAME»</title>
-	</head>
-	<body>
-		<div class="rootpage">
-			<h1>Верстка «NEW_PROJECT_NAME»</h1>
-			<div class="rootpage__info">
-				Опис проєкту
-			</div>
-			<h2>Готові сторінки:</h2>
-			<ol class="rootpage__list">
-				<li><a target="_blank" href="home.html">Головна</a></li>
-			</ol>
-			<h2>Попапи:</h2>
-			<ol class="rootpage__list">
-				<li><a target="_blank" href="home.html#"></a></li>
-			</ol>
-			<div class="rootpage__tnx">
-				<h2>Дякую за замовлення!</h2>
-				<p>Буду радий (да) гарному відгуку.</p>
-				<p>Звертайтесь ще!</p>
-			</div>
-			<div class="rootpage__contacts">
-				<h2>Мої контакти:</h2>
-				<p>Пошта: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
-				<p>Телефон: <a href="tel:8800800800">8 800 800 800</a></p>
-				<p>Соц. мережі: <a href="">посилання</a></p>
-			</div>
-		</div>
-	</body>
-	<style>
-		@charset "UTF-8";
-		@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-		* ,*::before, *::after {
-			padding: 0px;
-			margin: 0px;
-			border: 0px;
-			box-sizing: border-box; 
-		}
-		html, body {
-			height: 100%;
-			margin: 0;
-			padding: 0;
-			min-width: 320px;
-			width: 100%;
-			color: #fff;
-			background-color: #5e5373;
-		}
-		body {
-			font-family: Montserrat;
-			font-size: 100%;
-			line-height: 1;
-			font-size: 1rem;
-		}
-		a {
-			text-decoration: underline;
-			color: #ebe691
-		}
-		a:visited {
-			text-decoration: underline;
-			color: #aaa768;
-		}
-			a:hover {
-			text-decoration: none;
-		}
-		ul li {
-			list-style: none;
-		}
-		img {
-			vertical-align: top;
-		}
-		.wrapper {
-			width: 100%;
-			min-height: 100%;
-			overflow: hidden;
-		}
-		.rootpage{
-			padding: 30px;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-		}
-		@media (max-width: 767px) {
-			.rootpage{
-				padding:30px 15px;
-			}
-		}
-		h1 {
-			color: #ebe691;
-			font-size: 2.5rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-		@media (max-width: 767px) {
-			h1 {
-				font-size: 1.85rem;
-				margin: 0px 0px 1.25rem 0px;
-			}
-		}
-		h2 {
-			color: #ebe691;
-			font-size: 1.25rem;
-			margin: 0px 0px 1rem 0px;
-		}
-		@media (max-width: 767px) {
-			 h2 {
-				font-size: 1.125rem;
-				margin: 0px 0px 1rem 0px;
-			}
-		}
-		.rootpage__info{
-			line-height: 140%;
-			margin: 0px 0px 1.5rem 0px;
-		}
+<!doctype html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"HomePage" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <section class="page__main main">
+          <div class="main__container">
+            <div class="main__content">
+              <div class="main__bg-ibg">
+                <img src="@img/main/01.png" alt="айфоны" />
+                <img src="@img/main/02.png" alt="ролл с крабом" />
+                <img src="@img/main/03.png" alt="ролл с курицей" />
+                <img
+                  src="@img/main/04.png"
+                  alt="калифорния каппа маки в кунжуте"
+                />
+                <img src="@img/main/05.png" alt="филадельфия лайт сяке" />
+                <img src="@img/main/06.png" alt="синий ролл" />
+                <img src="@img/main/07.png" alt="скидка 20%" />
+              </div>
+              <h1 class="main__title">
+                Разыгрываем <span>5 iPhone</span> и свыше 5000 других призов!
+              </h1>
+              <a href="#" class="main__btn button _secondary _active"
+                >выиграть приз</a
+              >
+              <div class="main__slider swiper">
+                <div class="main__wrapper swiper-wrapper">
+                  <div class="main__slide swiper-slide _dark">
+                    <div class="swiper-slide__img-ibg_contain">
+                      <img src="@img/cards/01.png" alt="айфоны" />
+                    </div>
+                    <p>Лава с крабом при заказе от 799 р. в подарок.</p>
+                  </div>
+                  <div class="main__slide swiper-slide _red">
+                    <div class="swiper-slide__img-ibg_contain">
+                      <img src="@img/cards/02.png" alt="ролл с крабом" />
+                    </div>
+                    <p>Лава с крабом при заказе от 799 р. в подарок.</p>
+                  </div>
+                  <div class="main__slide swiper-slide _orange">
+                    <div class="swiper-slide__img-ibg_contain">
+                      <img src="@img/cards/03.png" alt="ролл с курицей" />
+                    </div>
+                    <p>Лава с крабом при заказе от 799 р. в подарок.</p>
+                  </div>
+                  <div class="main__slide swiper-slide _green">
+                    <div class="swiper-slide__img-ibg_contain">
+                      <img
+                        src="@img/cards/04.png"
+                        alt="калифорния каппа маки в кунжуте"
+                      />
+                    </div>
+                    <p>Лава с крабом при заказе от 799 р. в подарок.</p>
+                  </div>
+                  <div class="main__slide swiper-slide _yellow">
+                    <div class="swiper-slide__img-ibg_contain">
+                      <img
+                        src="@img/cards/05.png"
+                        alt="филадельфия лайт сяке"
+                      />
+                    </div>
+                    <p>Лава с крабом при заказе от 799 р. в подарок.</p>
+                  </div>
+                  <div class="main__slide swiper-slide _blue">
+                    <div class="swiper-slide__img-ibg_contain">
+                      <img src="@img/cards/06.png" alt="синий ролл" />
+                    </div>
+                    <p>Лава с крабом при заказе от 799 р. в подарок.</p>
+                  </div>
+                  <div class="main__slide swiper-slide _purple">
+                    <div class="swiper-slide__img-ibg_contain">
+                      <img src="@img/cards/07.png" alt="скидка 20%" />
+                    </div>
+                    <p>Лава с крабом при заказе от 799 р. в подарок.</p>
+                  </div>
+                </div>
 
-		.rootpage__list{
-			margin: 0px 0px 2.25rem 1.25rem;
-		}
-		.rootpage__list li:not(:last-child){
-			margin: 0px 0px 15px 0px;
-		}
-		.rootpage__contacts,
-		.rootpage__tnx{
-			border-radius: 200px;
-			padding: 20px 65px;
-			line-height: 140%;
-		}
-		@media (max-width: 767px){
-		.rootpage__contacts,
-		.rootpage__tnx{
-			border-radius:40px;
-			padding: 20px;
-		}
-		}
-		.rootpage__contacts{
-			background: #32b5a4;
-			
-		}
-		.rootpage__contacts a{
-			color: #ebe691;
-		}
-		.rootpage__tnx{
-			background: #c22d63;
-			margin: 0px 0px 1rem 0px;
-		}
-	</style>
+                <div class="swiper-pagination"></div>
+
+                <button type="button" class="swiper-button-prev">
+                  <img src="@img/icons/arrow.svg" alt="arrow left" />
+                </button>
+                <button type="button" class="swiper-button-next">
+                  <img src="@img/icons/arrow.svg" alt="arrow right" />
+                </button>
+
+                <div class="swiper-scrollbar"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="page__wheel wheel">
+          <div class="wheel__container">
+            <div class="wheel__content">
+              <h2 class="wheel__title">
+                <span>Крутите</span> колесо <br />
+                <span>и выигрывайте</span> вкусные призы!
+              </h2>
+              <div class="wheel__block block-wheel">
+                <div class="block-wheel__game game">
+                  <div class="game__pin">
+                    <img src="@img/wheel/pin.svg" alt="pin" />
+                  </div>
+
+                  <div class="game__circle">
+                    <img src="@img/wheel/circle.svg" alt="circle" />
+                  </div>
+
+                  <div class="game__pie">
+                    <img id="pie" src="@img/wheel/pie.png" alt="pie" />
+                  </div>
+                  <div class="game__slice">
+                    <img src="@img/wheel/slice.svg" alt="slice" />
+                  </div>
+
+                  <div class="game__btn btn-game">
+                    <div class="btn-game__icon">
+                      <img src="@img/logo-red-circle.svg" alt="logo" />
+                    </div>
+                    <p class="btn-game__text">Крутить!</p>
+                  </div>
+                </div>
+                <div class="block-wheel__attempts attempts-wheel">
+                  <h3 class="attempts-wheel__title">Всего попыток: 2</h3>
+                  <p class="attempts-wheel__subtitle">
+                    Выполните задание и нажмите кнопку “Готово”, чтобы получить
+                    дополнительную попытку крутить колесо
+                  </p>
+                  <ul class="attempts-wheel__list list-wheel-attempts">
+                    <li class="list-wheel-attempts__item item-wheel-list">
+                      <div
+                        class="item-wheel-list__left left-item-wheel _active"
+                      >
+                        <p class="left-item-wheel__text">
+                          Подпишитесь на сообщество
+                        </p>
+                        <p class="left-item-wheel__attempts">+ 1 попытка</p>
+                      </div>
+                      <div class="item-wheel-list__right">
+                        <button type="submit" class="button _active">
+                          Готово
+                        </button>
+                      </div>
+                    </li>
+                    <li class="list-wheel-attempts__item item-wheel-list">
+                      <div class="item-wheel-list__left left-item-wheel">
+                        <p class="left-item-wheel__text">
+                          Подпишитесь на сообщество
+                        </p>
+                        <p class="left-item-wheel__attempts">+ 1 попытка</p>
+                      </div>
+                      <div class="item-wheel-list__right">
+                        <button type="submit" class="button">Начислено</button>
+                      </div>
+                    </li>
+                    <li class="list-wheel-attempts__item item-wheel-list">
+                      <div
+                        class="item-wheel-list__left left-item-wheel _active"
+                      >
+                        <p class="left-item-wheel__text">
+                          Подпишитесь на сообщество
+                        </p>
+                        <p class="left-item-wheel__attempts">+ 1 попытка</p>
+                      </div>
+                      <div class="item-wheel-list__right">
+                        <button type="submit" class="button _active">
+                          Готово
+                        </button>
+                      </div>
+                    </li>
+                    <li class="list-wheel-attempts__item item-wheel-list">
+                      <div
+                        class="item-wheel-list__left left-item-wheel _active"
+                      >
+                        <p class="left-item-wheel__text">
+                          Подпишитесь на сообщество
+                        </p>
+                        <p class="left-item-wheel__attempts">+ 1 попытка</p>
+                      </div>
+                      <div class="item-wheel-list__right">
+                        <button type="submit" class="button _active">
+                          Готово
+                        </button>
+                      </div>
+                    </li>
+                    <li class="list-wheel-attempts__item item-wheel-list">
+                      <div
+                        class="item-wheel-list__left left-item-wheel _active"
+                      >
+                        <p class="left-item-wheel__text">
+                          Подпишитесь на сообщество
+                        </p>
+                        <p class="left-item-wheel__attempts">+ 1 попытка</p>
+                      </div>
+                      <div class="item-wheel-list__right">
+                        <button type="submit" class="button _active">
+                          Готово
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{}) @@include('html/_popup.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
 </html>

@@ -1,0 +1,36 @@
+@font-face {
+  font-family: GothaPro;
+  font-display: swap;
+  src:
+    url("../fonts/GothaProBol.woff2") format("woff2"),
+    url("../fonts/GothaProBol.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Pusia;
+  font-display: swap;
+  src:
+    url("../fonts/Pusia-Extrabold.woff2") format("woff2"),
+    url("../fonts/Pusia-Extrabold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: GothaPro;
+  font-display: swap;
+  src:
+    url("../fonts/GothaProReg.woff2") format("woff2"),
+    url("../fonts/GothaProReg.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: GothaPro;
+  font-display: swap;
+  src:
+    url("../fonts/GothaProMed.woff2") format("woff2"),
+    url("../fonts/GothaProMed.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
